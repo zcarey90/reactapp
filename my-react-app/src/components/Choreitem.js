@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export class ChoreItem extends Component {
   render() {
@@ -9,5 +10,9 @@ export class ChoreItem extends Component {
     );
   }
 }
+
+ChoreItem.propTypes = {
+  chore: PropTypes.object.isRequired
+};
 
 export default ChoreItem;

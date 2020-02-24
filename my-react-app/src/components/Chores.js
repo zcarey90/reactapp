@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ChoreItem from "./ChoreItem";
+import PropTypes from "prop-types";
 
 class Chores extends Component {
   render() {
@@ -8,5 +9,9 @@ class Chores extends Component {
     ));
   }
 }
+
+Chores.propTypes = {
+  chores: PropTypes.array.isRequired
+};
 
 export default Chores;
