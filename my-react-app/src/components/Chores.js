@@ -3,7 +3,9 @@ import ChoreItem from "./ChoreItem";
 
 class Chores extends Component {
   render() {
-    return this.props.chores.map(chore => <ChoreItem chore={chore} />);
+    return this.props.chores.map(chore => (
+      <ChoreItem key={chore.id} chore={chore} />
+    ));
   }
 }
 
