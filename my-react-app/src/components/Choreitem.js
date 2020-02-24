@@ -4,7 +4,7 @@ export class ChoreItem extends Component {
   render() {
     return (
       <div>
-        <p>Howdy</p>
+        <p>{this.props.chore.title}</p>
       </div>
     );
   }
