@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export class ChoreItem extends Component {
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "purple" }}>
         <p>{this.props.chore.title}</p>
       </div>
     );
