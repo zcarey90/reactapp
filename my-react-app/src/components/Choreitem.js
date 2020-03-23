@@ -11,10 +11,17 @@ export class ChoreItem extends Component {
     };
   };
 
+  checkDone = e => {
+    console.log(this.props);
+  };
+
   render() {
     return (
       <div style={this.getStyle()}>
-        <p>{this.props.chore.title}</p>
+        <p>
+          <input type="checkbox" onChange={this.checkDone} /> {""}
+          {this.props.chore.title}
+        </p>
       </div>
     );
   }
