@@ -34,10 +34,20 @@ class App extends Component {
     });
   };
 
+  delChore = id => {
+    this.setState({
+      chores: [...this.state.chores.filter(chore => chore.id !== id)]
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <Chores chores={this.state.chores} checkDone={this.checkDone} />
+        <Chores
+          chores={this.state.chores}
+          checkDone={this.checkDone}
+          delChore={this.delChore}
+        />
       </div>
     );
   }

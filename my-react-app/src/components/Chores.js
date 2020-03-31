@@ -9,6 +9,7 @@ class Chores extends Component {
         key={chore.id}
         chore={chore}
         checkDone={this.props.checkDone}
+        delChore={this.props.delChore}
       />
     ));
   }

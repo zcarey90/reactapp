@@ -21,7 +21,12 @@ export class ChoreItem extends Component {
             onChange={this.props.checkDone.bind(this, id)}
           />{" "}
           {title}
-          <button style={buttonStyle}>x</button>
+          <button
+            onClick={this.props.delChore.bind(this, id)}
+            style={buttonStyle}
+          >
+            x
+          </button>
         </p>
       </div>
     );
