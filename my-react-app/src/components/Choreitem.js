@@ -21,6 +21,7 @@ export class ChoreItem extends Component {
             onChange={this.props.checkDone.bind(this, id)}
           />{" "}
           {title}
+          <button style={buttonStyle}>x</button>
         </p>
       </div>
     );
@@ -29,6 +30,16 @@ export class ChoreItem extends Component {
 
 ChoreItem.propTypes = {
   chore: PropTypes.object.isRequired
+};
+
+const buttonStyle = {
+  background: "green",
+  color: "yellow",
+  border: "none",
+  padding: "5px 8px",
+  borderRadius: "50%",
+  cursor: "pointer",
+  float: "right"
 };
 
 export default ChoreItem;
