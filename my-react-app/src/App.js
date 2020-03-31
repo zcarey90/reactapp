@@ -23,10 +23,21 @@ class App extends Component {
     ]
   };
 
+  checkDone = id => {
+    this.setState({
+      chores: this.state.chores.map(chore => {
+        if (chore.id === id) {
+          chore.completed = !chore.completed;
+        }
+        return chore;
+      })
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <Chores chores={this.state.chores} />
+        <Chores chores={this.state.chores} checkDone={this.checkDone} />
       </div>
     );
   }

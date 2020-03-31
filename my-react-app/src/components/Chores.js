@@ -5,7 +5,11 @@ import PropTypes from "prop-types";
 class Chores extends Component {
   render() {
     return this.props.chores.map(chore => (
-      <ChoreItem key={chore.id} chore={chore} />
+      <ChoreItem
+        key={chore.id}
+        chore={chore}
+        checkDone={this.props.checkDone}
+      />
     ));
   }
 }
