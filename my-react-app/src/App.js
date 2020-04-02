@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/layout/Header";
 import Chores from "./components/Chores";
+import AddChore from "./components/AddChore";
 
 import "./App.css";
 class App extends Component {
@@ -45,6 +46,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <AddChore />
         <Chores
           chores={this.state.chores}
           checkDone={this.checkDone}
