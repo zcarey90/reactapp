@@ -45,13 +45,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <AddChore />
-        <Chores
-          chores={this.state.chores}
-          checkDone={this.checkDone}
-          delChore={this.delChore}
-        />
+        <div className="receptacle">
+          <Header />
+          <AddChore />
+          <Chores
+            chores={this.state.chores}
+            checkDone={this.checkDone}
+            delChore={this.delChore}
+          />
+        </div>
       </div>
     );
   }
