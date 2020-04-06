@@ -42,12 +42,21 @@ class App extends Component {
     });
   };
 
+  addChore = title => {
+    const newChore = {
+      id: 4,
+      title,
+      completed: false
+    };
+    this.setState({ chores: [...this.state.chores, newChore] });
+  };
+
   render() {
     return (
       <div className="App">
         <div className="receptacle">
           <Header />
-          <AddChore />
+          <AddChore addChore={this.addChore} />
           <Chores
             chores={this.state.chores}
             checkDone={this.checkDone}
