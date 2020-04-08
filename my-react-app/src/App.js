@@ -2,23 +2,24 @@ import React, { Component } from "react";
 import Header from "./components/layout/Header";
 import Chores from "./components/Chores";
 import AddChore from "./components/AddChore";
+import uuid from "uuid";
 
 import "./App.css";
 class App extends Component {
   state = {
     chores: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: "Clean garage",
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: "Take the dog for a walk",
         completed: false
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: "Wash my car",
         completed: false
       }
@@ -44,7 +45,7 @@ class App extends Component {
 
   addChore = title => {
     const newChore = {
-      id: 4,
+      id: uuid.v4(),
       title,
       completed: false
     };
