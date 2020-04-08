@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <header style={chartStyle}>
-      <h1>ChoreChart</h1>
+      <h1>Chore Chart</h1>
     </header>
   );
 }
